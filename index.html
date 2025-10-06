@@ -1,7 +1,247 @@
-<h1>Portfolio de Cris</h1>
-<p><strong>Ingeniera de Software</strong> con 3 años de experiencia</p>
-<h2 id="experiencia">Experiencia</h2>
- <ul>
- <li class="">ESII</li>
- <li class="">Maestranza Aérea</li>
- </ul>
+<!DOCTYPE html>
+<html lang="es">
+  <!-- Metadatos básicos -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#09f" />
+  <title>Portfolio de Cris</title>
+
+  <!-- SEO básico -->
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Portfolio profesional de Cris: experiencia, proyectos y contacto." />
+
+  <!-- Open Graph (para compartir en redes) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Portfolio de Cris" />
+  <meta property="og:description" content="Experiencia, proyectos y formulario de contacto." />
+  <meta property="og:url" content="https://tu-dominio.com/" />
+  <meta property="og:image" content="https://tu-dominio.com/og-image.jpg" />
+
+  <!-- Alternativo/canónico (ejemplo, ajusta URLs si tienes sitio publicado) -->
+  <link rel="alternate" href="https://tu-dominio.com/es" hreflang="es-ES" />
+  <link rel="canonical" href="https://tu-dominio.com/" />
+
+  <!-- Icono del sitio -->
+  <link rel="icon" type="image/png" href="CAI.png" />
+
+  <!-- Estilos mínimos (según práctica) -->
+  <style>
+    /* Según la práctica: un fondo sencillo */
+    body {
+      background: rgba(208, 208, 208, 0.9);
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.5;
+      color: #111;
+    }
+
+    /* Un poco de comodidad visual extra (opcional, no interfiere con la práctica) */
+    .container { max-width: 900px; margin: 0 auto; padding: 16px; }
+    header { background: #fff; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid #e6e6e6; }
+    nav { display: flex; gap: 16px; padding: 12px 16px; align-items: center; flex-wrap: wrap; }
+    nav a { text-decoration: none; color: #0a58ca; }
+    nav a:hover { text-decoration: underline; }
+    h1, h2, h3, h4 { margin: 16px 0 8px; }
+    img, video, iframe { max-width: 100%; height: auto; }
+    .muted { color: #555; }
+    section { background: #fff; border: 1px solid #e6e6e6; border-radius: 10px; padding: 16px; margin: 16px 0; }
+    fieldset { border: 1px solid #ddd; padding: 12px; border-radius: 8px; margin-bottom: 12px; }
+    label { display: inline-block; margin: 6px 0; }
+    input[type="text"], input[type="email"], input[list], select { padding: 8px; border: 1px solid #ccc; border-radius: 6px; width: min(420px, 100%); }
+    .row { display: grid; gap: 10px; }
+    .actions { display: flex; gap: 10px; margin-top: 10px; }
+    button, input[type="submit"] { padding: 10px 14px; border-radius: 8px; border: 1px solid #bbb; background: #f6f6f6; cursor: pointer; }
+    button:hover, input[type="submit"]:hover { background: #eee; }
+    small { color: #444; }
+    footer.page { text-align: center; padding: 24px 0 40px; color: #666; }
+    /* Aspect ratio para iframes de vídeo (como sugiere la práctica) */
+    .video-embed { width: 100%; aspect-ratio: 16/9; border: 0; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container" aria-label="Principales">
+      <a href="#experiencia">Experiencia</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="https://github.com/Cris3773/" target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+  </header>
+
+  <!-- Vídeo de ejemplo justo después del header (según la práctica). Puedes quitarlo si no lo necesitas. -->
+  <div class="container" id="intro-video">
+    <video
+      controls
+      poster="poster.jpg"
+      src="https://filesamples.com/samples/video/mp4/sample_960x400_ocean_with_audio.mp4">
+      Tu navegador no soporta el elemento <code>video</code>.
+    </video>
+  </div>
+
+  <main class="container">
+    <h1>Portfolio de Cris</h1>
+
+    <p>
+      <strong>Ingeniera de Software</strong> con 3 años de experiencia.
+    </p>
+
+    <!-- Imagen personal -->
+    <section aria-labelledby="foto de CAI">
+      <h2 id="foto de CAI">Sobre mí</h2>
+      <img
+        id="foto-img"
+        title="Foto de Cristina"
+        src="CAI.png"
+        alt="Fotografía de Cristina, de cara."
+        width="320"
+        height="320"
+      />
+      <!-- Ejemplo de descarga de la imagen desde el mismo dominio -->
+      <p class="muted">
+        <a download href="CAI.png" title="Descargar mi foto">Descargar mi foto</a>
+      </p>
+    </section>
+
+    <!-- Experiencia -->
+    <section aria-labelledby="experiencia">
+      <h2 id="experiencia">Experiencia</h2>
+      <ul>
+        <li class="list-item">ESII</li>
+        <li class="list-item">Maestranza Aérea</li>
+      </ul>
+
+      <!-- Ejemplo extra de lista ordenada con atributos (opcional para pruebas) -->
+      <h3>Logros (lista ordenada de ejemplo)</h3>
+      <ol type="1" start="3">
+        <li value="3">Certificación A</li>
+        <li>Certificación B</li>
+        <li>Certificación C</li>
+      </ol>
+    </section>
+
+    <!-- Aside con tecnologías favoritas (HTML semántico) -->
+    <aside aria-labelledby="tecnologias">
+      <header>
+        <h3 id="tecnologias">Mis tecnologías favoritas</h3>
+      </header>
+      <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ol>
+    </aside>
+
+    <!-- Proyectos (section + 3 articles) -->
+    <h2 id="proyectos">Proyectos realizados</h2>
+    <section aria-labelledby="proyectos">
+      <article>
+        <header><h4>Sitio Web Corporativo</h4></header>
+        <p>Desarrollo de una web corporativa con una interfaz amigable y moderna.</p>
+        <footer><small>Tecnologías utilizadas: HTML, CSS, JavaScript</small></footer>
+      </article>
+
+      <article>
+        <header><h4>Aplicación e-commerce</h4></header>
+        <p>Implementación de una aplicación web de tienda con catálogo y carrito.</p>
+        <footer><small>Tecnologías utilizadas: HTML, CSS, JavaScript</small></footer>
+      </article>
+
+      <article>
+        <header><h4>Aplicación móvil</h4></header>
+        <p>App para gimnasios con gestión de clases y monitores.</p>
+        <footer><small>Tecnologías utilizadas: Kotlin, Android Studio</small></footer>
+      </article>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section aria-labelledby="contacto">
+      <h2 id="contacto">Formulario de contacto</h2>
+      <form method="post" action="/">
+        <fieldset>
+          <legend>Información personal</legend>
+          <div class="row">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Nombre" required />
+          </div>
+
+          <div class="row">
+            <label for="em">Email:</label>
+            <input type="email" id="em" name="email" placeholder="ejemplo@gmail.com" required />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Otros</legend>
+
+          <div class="row">
+            <label for="why">¿Sobre qué quieres contactar?</label>
+            <select name="why" id="why">
+              <option value="1">Trabajo</option>
+              <option value="2">Consulta</option>
+              <option value="3">Otros</option>
+            </select>
+          </div>
+
+          <!-- Datalist -->
+          <div class="row">
+            <datalist id="lang">
+              <option value="JavaScript"></option>
+              <option value="Python"></option>
+              <option value="C++"></option>
+            </datalist>
+            <label for="lang-input">¿Qué lenguaje necesitas ayuda?</label>
+            <input list="lang" id="lang-input" name="lang" placeholder="Escribe o elige…" />
+          </div>
+
+          <!-- Checkbox de términos (requerido) -->
+          <div class="row">
+            <label for="terms">Acepta los términos</label>
+            <input type="checkbox" id="terms" name="terms" required />
+          </div>
+        </fieldset>
+
+        <!-- Botones -->
+        <div class="actions">
+          <input type="submit" value="Enviar contacto" />
+          <button type="reset">Borrar formulario</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Preguntas frecuentes con details/summary -->
+    <section aria-labelledby="faq">
+      <h2 id="faq">Preguntas frecuentes</h2>
+
+      <details>
+        <summary>¿Cómo contacto?</summary>
+        <p>Escríbeme a <a href="mailto:cristilou965@gmail.com">cristilou965@gmail.com</a></p>
+      </details>
+
+      <details>
+        <summary>¿Cómo me llamo?</summary>
+        <p>Cristina</p>
+      </details>
+    </section>
+
+   
+      <button id="show">Ver más información</button>
+    </section>
+  </main>
+
+  <footer class="page">
+    © <span id="year"></span> Cristina — Todos los derechos reservados.
+  </footer>
+
+  <!-- Script para dialog y año dinámico -->
+  <script>
+    // Botones y diálogo (según práctica)
+    window.show?.addEventListener('click', () => {
+      window.modal?.showModal();
+    });
+    window.cerrar?.addEventListener('click', () => {
+      window.modal?.close();
+    });
+
+   </script>
+</body>
+</html>
